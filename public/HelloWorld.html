@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/style.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="p-6 bg-gray-50">
+
+    <h1 class="text-3xl font-bold underline mb-6">
+        Hello world!
+    </h1>
+
+    <!-- Masalah 1: Cakupan (Scope) Kebocoran Data -->
+    <div x-data="{ open: true }">
+        <div x-data="{ label: 'Content:' }">
+            <span x-text="label">Hello</span>
+            <!-- Sekarang 'open' bisa diakses karena berada di dalam pembungkusnya -->
+            <span x-show="open">World</span>
+        </div>
+    </div>
+
+    <!-- Masalah 2 & 3: Penggunaan Alpine.data yang Benar -->
+    <div class="mt-4" x-data="dropdown">
+        <button class="bg-blue-500 text-white px-3 py-1 rounded" @click="toggle">Expand</button>
+        <span x-show="open">Content...</span>
+    </div>
+
+    <div class="mt-2" x-data="dropdown">
+        <button class="bg-blue-500 text-white px-3 py-1 rounded" @click="toggle">Expand</button>
+        <span x-show="open">Some Other Content...</span>
+    </div>
+
+    <button class="mt-4 block bg-gray-200 px-3 py-1 rounded" x-data="{ label: 'Click Here' }"
+        x-text="label">Hai</button>
+
+    <script type="module">
+        import Alpine from './js/alpine.mjs';
+
+        // Daftarkan komponen dropdown sebelum Alpine dimulai
+        Alpine.data('dropdown', () => ({
+            open: false,
+            toggle() {
+                this.open = !this.open
+            }
+        }));
+
+        // WAJIB dipanggil jika mengunduh via NPM agar Alpine menyala
+        window.Alpine = Alpine;
+        Alpine.start();
+    </script>
+</body>

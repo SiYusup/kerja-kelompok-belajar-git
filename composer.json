@@ -1,0 +1,17 @@
+{
+  "name": "kerja_kelompok/kerja_kelompok_belajar_git",
+  "description": "Kerja Kelompok Pak Adit Belajar Git dan GitHub dengan Membuat Aplikasi ToDoList",
+  "type": "project",
+  "autoload": {
+    "psr-4": {
+      "KerjaKelompok\\KerjaKelompokBelajarGit\\": "app/"
+    }
+  },
+  "authors": [
+    {
+      "name": "UCrazy",
+      "email": "finder.ucup@gmail.com"
+    }
+  ],
+  "require": {}
+}

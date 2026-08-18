@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Siswa</title>
+    <!-- Pada view asli, pakai path lokal: /css/bulma-1.0.4/bulma/css/bulma.min.css -->
+    <link rel="stylesheet" href="/css/bulma-1.0.4/bulma/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar is-info" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <!-- Button kembali ke home / menu absensi -->
+            <a class="navbar-item" href="/">
+                <span class="icon">
+                    <i class="fas fa-arrow-left"></i>
+                </span>
+                <span class="has-text-weight-semibold">Kembali ke Absensi</span>
+            </a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navMenu" class="navbar-menu">
+            <div class="navbar-start">
+                <span class="navbar-item has-text-weight-semibold">Menu Utama</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ================= KONTEN UTAMA ================= -->
+    <section class="section">
+        <div class="container">
+
+            <!-- Judul halaman -->
+            <h1 class="title">Daftar Siswa</h1>
+            <h2 class="subtitle">Kelola data siswa</h2>
+
+            <!-- ================= PENCARIAN ================= -->
+            <div class="field">
+                <div class="control has-icons-left">
+                    <input class="input is-rounded is-medium" type="text"
+                           placeholder="Cari nama atau NISN siswa...">
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-search"></i>
+                    </span>
+                </div>
+            </div>
+
+            <!-- ================= GRID CARD SISWA =================
+                 Pada view asli, ganti blok card di bawah dengan perulangan PHP,
+                 misalnya: foreach (siswa as row) { echo card ini per siswa } -->
+            <div class="columns is-multiline is-3">
+
+                <!-- Card Siswa 1 -->
+                <div class="column is-one-third">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-left">
+                                    <figure class="image is-48x48">
+                                        <div class="is-flex is-align-items-center is-justify-content-center is-rounded has-background-info-light has-text-info" style="width: 48px; height: 48px;">
+                                            <span class="icon is-medium"><i class="fas fa-user"></i></span>
+                                        </div>
+                                    </figure>
+                                </div>
+                                <div class="media-content">
+                                    <p class="title is-5 mb-0">Rian Hidayat</p>
+                                    <p class="subtitle is-6 has-text-grey">NISN: 99881122</p>
+                                </div>
+                            </div>
+
+                            <div class="content">
+                                <p class="mb-2">
+                                    <span class="tag is-info is-light">XII RPL</span>
+                                    <span class="tag is-light">Laki-laki</span>
+                                </p>
+                                <p class="has-text-grey is-size-7 mb-0">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    Jl. Merdeka No. 10, Jakarta
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Siswa 2 -->
+                <div class="column is-one-third">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-left">
+                                    <figure class="image is-48x48">
+                                        <div class="is-flex is-align-items-center is-justify-content-center is-rounded has-background-primary-light has-text-primary" style="width: 48px; height: 48px;">
+                                            <span class="icon is-medium"><i class="fas fa-user"></i></span>
+                                        </div>
+                                    </figure>
+                                </div>
+                                <div class="media-content">
+                                    <p class="title is-5 mb-0">Siti Aminah</p>
+                                    <p class="subtitle is-6 has-text-grey">NISN: 99883344</p>
+                                </div>
+                            </div>
+
+                            <div class="content">
+                                <p class="mb-2">
+                                    <span class="tag is-primary is-light">XII TKJ</span>
+                                    <span class="tag is-light">Perempuan</span>
+                                </p>
+                                <p class="has-text-grey is-size-7 mb-0">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    Jl. Pemuda No. 45, Surabaya
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Siswa 3 -->
+                <div class="column is-one-third">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-left">
+                                    <figure class="image is-48x48">
+                                        <div class="is-flex is-align-items-center is-justify-content-center is-rounded has-background-warning-light has-text-warning" style="width: 48px; height: 48px;">
+                                            <span class="icon is-medium"><i class="fas fa-user"></i></span>
+                                        </div>
+                                    </figure>
+                                </div>
+                                <div class="media-content">
+                                    <p class="title is-5 mb-0">Budi Santoso</p>
+                                    <p class="subtitle is-6 has-text-grey">NISN: 99885566</p>
+                                </div>
+                            </div>
+
+                            <div class="content">
+                                <p class="mb-2">
+                                    <span class="tag is-info is-light">XII RPL</span>
+                                    <span class="tag is-light">Laki-laki</span>
+                                </p>
+                                <p class="has-text-grey is-size-7 mb-0">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    Jl. Sudirman No. 7, Bandung
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Siswa 4 -->
+                <div class="column is-one-third">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-left">
+                                    <figure class="image is-48x48">
+                                        <div class="is-flex is-align-items-center is-justify-content-center is-rounded has-background-danger-light has-text-danger" style="width: 48px; height: 48px;">
+                                            <span class="icon is-medium"><i class="fas fa-user"></i></span>
+                                        </div>
+                                    </figure>
+                                </div>
+                                <div class="media-content">
+                                    <p class="title is-5 mb-0">Dewi Lestari</p>
+                                    <p class="subtitle is-6 has-text-grey">NISN: 99887788</p>
+                                </div>
+                            </div>
+
+                            <div class="content">
+                                <p class="mb-2">
+                                    <span class="tag is-primary is-light">XII TKJ</span>
+                                    <span class="tag is-light">Perempuan</span>
+                                </p>
+                                <p class="has-text-grey is-size-7 mb-0">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    Jl. Pandanaran No. 21, Semarang
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Siswa 5 -->
+                <div class="column is-one-third">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-left">
+                                    <figure class="image is-48x48">
+                                        <div class="is-flex is-align-items-center is-justify-content-center is-rounded has-background-info-light has-text-info" style="width: 48px; height: 48px;">
+                                            <span class="icon is-medium"><i class="fas fa-user"></i></span>
+                                        </div>
+                                    </figure>
+                                </div>
+                                <div class="media-content">
+                                    <p class="title is-5 mb-0">Andi Pratama</p>
+                                    <p class="subtitle is-6 has-text-grey">NISN: 99889900</p>
+                                </div>
+                            </div>
+
+                            <div class="content">
+                                <p class="mb-2">
+                                    <span class="tag is-info is-light">XII RPL</span>
+                                    <span class="tag is-light">Laki-laki</span>
+                                </p>
+                                <p class="has-text-grey is-size-7 mb-0">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    Jl. Diponegoro No. 12, Yogyakarta
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Siswa 6 -->
+                <div class="column is-one-third">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-left">
+                                    <figure class="image is-48x48">
+                                        <div class="is-flex is-align-items-center is-justify-content-center is-rounded has-background-primary-light has-text-primary" style="width: 48px; height: 48px;">
+                                            <span class="icon is-medium"><i class="fas fa-user"></i></span>
+                                        </div>
+                                    </figure>
+                                </div>
+                                <div class="media-content">
+                                    <p class="title is-5 mb-0">Nur Aisyah</p>
+                                    <p class="subtitle is-6 has-text-grey">NISN: 99880011</p>
+                                </div>
+                            </div>
+
+                            <div class="content">
+                                <p class="mb-2">
+                                    <span class="tag is-primary is-light">XII TKJ</span>
+                                    <span class="tag is-light">Perempuan</span>
+                                </p>
+                                <p class="has-text-grey is-size-7 mb-0">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    Jl. Melati No. 3, Medan
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+</body>
+
+</html>
